@@ -1,0 +1,34 @@
+.
+├── Cargo.lock
+├── Cargo.toml
+├── README.adoc
+├── src
+│   ├── bin
+│   │   ├── main.rs
+│   │   ├── script.rs
+│   │   └── script_csv.rs
+│   ├── data
+│   │   └── data.csv
+│   ├── lib
+│   └── tests
+├── target
+│   ├── CACHEDIR.TAG
+│   ├── debug
+│   │   ├── assimilate_rust
+│   │   ├── assimilate_rust.d
+│   │   ├── build
+│   │   ├── deps
+│   │   ├── examples
+│   │   ├── incremental
+│   │   ├── script
+│   │   └── script.d
+│   └── release
+│       ├── build
+│       ├── deps
+│       ├── examples
+│       ├── incremental
+│       ├── script
+│       └── script.d
+└── tree.txt
+
+17 directories, 15 files

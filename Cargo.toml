@@ -1,0 +1,20 @@
+[package]
+name = "assimilate_rust"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+csv = "0.14"
+rand = "0.8.3"
+serde = { version = "1.0", features = ["derive"] }
+regex = "1"
+
+[[bin]]
+name = "script"
+path = "src/bin/script.rs"
+
+# [[bin]]
+# name = "script_csv"
+# path = "src/bin/script_csv.rs"

@@ -1,0 +1,120 @@
+= Learning Rust
+
+
+== Install and Update Rust
+
+* First head over to and proceed with the link:https://doc.rust-lang.org/book/ch01-01-installation.html[Instalation]
+
+
+
+* To update installation proceed ith the following command
+
+    rustup update
+
+
+== project structure
+
+[source, bash]
+----
+include::tree.txt[]
+----
+
+== Compile Rust project
+
+Create a file with .rs extension, and your code then compile the file
+
+    rustc script.rs
+
+== Building Rust project
+
+In the context of Rust, cargo build and cargo run are commands used for compiling and running your project. Here's what they do:
+
+
+* cargo build: This command is responsible for building your project from source code into a usable form. It produces an executable file in the target/debug directory by default, or you can specify another location with --target option.
+The resulting binary doesn't contain any runtime optimizations and may be slower than if it were produced with cargo build --release. However, this command is useful for preparing your project to be run on a target system, especially when testing the compilation process.
+
+    # debug: build single binary
+    cargo build --bin script
+
+    # prod: release an optimized target
+    cargo build --bin script --release
+
+    # run the executable
+    ./target/release/script
+
+
+* cargo run: This command builds your project (by default in debug mode), then runs its resulting executable file. You can also use it directly with the name of one of your project's binaries specified as an argument to only build and run that binary, as demonstrated before.
+
+Both commands compile your code into a binary or library which you can execute on your system using cargo run followed by the directory/filename of your main function (usually in src/bin). Useful flags include --release for optimizations during compilation and --target to specify output location. For more advanced usage, consider checking out the Cargo documentation at https://doc.rust-lang.org/cargo/.
+
+
+
+== Build and release a Rust project
+
+. Open your terminal in your project directory (where `Cargo.toml` is located).
+. To compile the project, without optimizations for speed or size, use the command:
+
+   $ cargo build
+
+   This produces a binary file under target/debug/. You can run this program with:
+
+   $ ./target/debug/your_program
+
+. If you want to optimize your project for speed and size, use the command:
+
+   $ cargo build --release
+
+   This produces a binary file under target/release/. You can run this program with:
+
+   $ ./target/release/your_program
+
+. If you want to specify which executable to run, use the `--bin` argument followed by your chosen binary name. For instance, if you have multiple executables in your project and you're interested in running "script":
+
+   $ cargo run --bin script 
+   ./target/release/script
+
+. After finishing your work on GitHub or other platforms, to publish the package to crates.io for others to use:
+* Increment version number in `Cargo.toml` (under `[package]`) according to semantic versioning rules.
+* Login into your account with `cargo login <your token>` command in terminal where `<your token>` is the API Token which you can generate from https://crates.io/me.
+* Publish package using `cargo publish` command in terminal.
+. Test the published package by creating a new project and use it as dependency with its name and version number.
+
+
+== Built-in types
+
+Rust has several built-in types for handling different kinds of data:
+
+
+* **Integral Types**: These include u8, i32, and so on. The first character indicates whether the number is signed (i) or unsigned (u), and the number after that indicates the size in bits (8-bit, 32-bit, etc.).
+
+
+
+* **Floating-Point Types**: These are f64 and f32 which represent double precision floating point numbers and single precision ones respectively.
+
+
+
+* **Numeric Operations**: Rust has several traits that allow you to do numeric operations on types, including addition (Add), subtraction (Sub), multiplication (Mul), division (Div), and so forth. These are defined in the std::ops module.
+
+
+
+* **Boolean Type**: This is a type that can have only two values, true or false. It's often used for control flow in your programs.
+
+
+
+* **Character Types**: Rust's char type represents a Unicode Scalar Value, meaning it can represent any valid character in many languages and beyond.
+
+* **Array Type**: This is a fixed-size collection of elements with the same type. For example, let arr: [i32; 5] = [1, 2, 3, 4, 5]; declares an array of five i32 values.
+
+* **Tuple Type**: This is a general-purpose data structure that can hold different types and amounts of data. For example, let tup: (i32, f64, u8) = (500, 60.4, 1); declares a tuple with an i32, f64, and u8 value.
+
+* **String Type**: Rust's String type is a growable UTF-8 encoded string type that can be easily modified like you would do in Python or Java. 
+
+* **Pointer Types**: These types represent the memory addresses of values, and there are two kinds: Box<T> for allocating on the heap (and thus allowing large amounts of data), and &T for references to other values.
+
+* **Option Type**: Rust's Option type is used when a value could be something or nothing. This can help prevent null pointer exceptions at compile time. The variants are Some(T) (which represents a value of type T) and None, which means no value.
+
+
+
+Remember that in Rust, types must be declared and annotated as such. You also have the flexibility to create your own custom data structures using structs or enums. 
+
+For more information on these and other basic types, consider referring to the official Rust documentation (https://doc.rust-lang.org/std/). It provides comprehensive explanations for all of these and many others in detail.
