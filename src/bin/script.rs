@@ -82,29 +82,29 @@ fn control_flow() {
 use std::sync::{Arc, Mutex}; // Import the necessary concurrent data structures from the standard library
 use std::thread; // We also need to import thread functionality
 
-fn concurrency() {
-    let mut counter = Arc::new(Mutex::new(0)); // Create a shared and thread-safe counter
+// fn concurrency() {
+//     let mut counter = Arc::new(Mutex::new(0)); // Create a shared and thread-safe counter
 
-    let mut handles = vec![]; // Vec to store threads
+//     let mut handles = vec![]; // Vec to store threads
 
-    for _ in 0..10 {
-        // Spawn multiple threads that increment the counter
-        let counter = Arc::clone(&counter); // Clone the reference to the counter
-        let handle = thread::spawn(move || {
-            // Create a new thread and store its handle
-            let mut num = counter.lock().unwrap(); // Lock the mutex, get the value from it, then unlock it
-            *num += 1; // Increment the value
-        });
-        handles.push(handle); // Push the handle to a Vec so we can join them later
-    }
+//     for _ in 0..10 {
+//         // Spawn multiple threads that increment the counter
+//         let counter = Arc::clone(&counter); // Clone the reference to the counter
+//         let handle = thread::spawn(move || {
+//             // Create a new thread and store its handle
+//             let mut num = counter.lock().unwrap(); // Lock the mutex, get the value from it, then unlock it
+//             *num += 1; // Increment the value
+//         });
+//         handles.push(handle); // Push the handle to a Vec so we can join them later
+//     }
 
-    for handle in handles {
-        // Wait for all threads to finish
-        handle.join().unwrap(); // Join and handle any errors that might occur
-    }
+//     for handle in handles {
+//         // Wait for all threads to finish
+//         handle.join().unwrap(); // Join and handle any errors that might occur
+//     }
 
-    println!("The counter's final value is {}", *counter.lock().unwrap()); // Print the final value of the counter
-}
+//     println!("The counter's final value is {}", *counter.lock().unwrap()); // Print the final value of the counter
+// }
 
 fn main() {
     ownership();
@@ -115,5 +115,5 @@ fn main() {
     control_flow();
     // error_Handling();
     data_structures();
-    concurrency();
+    // concurrency();
 }

@@ -10,11 +10,12 @@ csv = "0.14"
 rand = "0.8.3"
 serde = { version = "1.0", features = ["derive"] }
 regex = "1"
+ferris-says = "0.3.1"
 
 [[bin]]
 name = "script"
 path = "src/bin/script.rs"
 
-# [[bin]]
-# name = "script_csv"
-# path = "src/bin/script_csv.rs"
+[[bin]]
+name = "sample"
+path = "src/bin/sample.rs"
