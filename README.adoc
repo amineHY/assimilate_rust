@@ -1,5 +1,6 @@
 = Learning Rust
-
+:toc:
+:toc-title: 
 
 == Install and Update Rust
 
