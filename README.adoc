@@ -1,17 +1,14 @@
 = Learning Rust
 :toc:
-:toc-title: 
+:toc-title:
 
 == Install and Update Rust
 
 * First head over to and proceed with the link:https://doc.rust-lang.org/book/ch01-01-installation.html[Instalation]
 
-
-
 * To update installation proceed ith the following command
 
     rustup update
-
 
 == project structure
 
@@ -19,6 +16,16 @@
 ----
 include::tree.txt[]
 ----
+
+== Cargo: the Rust build tool and package manager
+When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
+
+* *cargo new hello-rust* : generates a "Hello, world!" project 
+* *cargo build*: build your project
+* *cargo run*: run your project
+* *cargo test*: test your project
+* *cargo doc*: build documentation for your project
+* *cargo publish*: publish a library to crates.io
 
 == Compile Rust project
 
@@ -71,7 +78,7 @@ Both commands compile your code into a binary or library which you can execute o
 
 . If you want to specify which executable to run, use the `--bin` argument followed by your chosen binary name. For instance, if you have multiple executables in your project and you're interested in running "script":
 
-   $ cargo run --bin script 
+   $ cargo run --bin script
    ./target/release/script
 
 . After finishing your work on GitHub or other platforms, to publish the package to crates.io for others to use:
@@ -108,7 +115,7 @@ Rust has several built-in types for handling different kinds of data:
 
 * **Tuple Type**: This is a general-purpose data structure that can hold different types and amounts of data. For example, let tup: (i32, f64, u8) = (500, 60.4, 1); declares a tuple with an i32, f64, and u8 value.
 
-* **String Type**: Rust's String type is a growable UTF-8 encoded string type that can be easily modified like you would do in Python or Java. 
+* **String Type**: Rust's String type is a growable UTF-8 encoded string type that can be easily modified like you would do in Python or Java.
 
 * **Pointer Types**: These types represent the memory addresses of values, and there are two kinds: Box<T> for allocating on the heap (and thus allowing large amounts of data), and &T for references to other values.
 
@@ -116,6 +123,11 @@ Rust has several built-in types for handling different kinds of data:
 
 
 
-Remember that in Rust, types must be declared and annotated as such. You also have the flexibility to create your own custom data structures using structs or enums. 
+Remember that in Rust, types must be declared and annotated as such. You also have the flexibility to create your own custom data structures using structs or enums.
 
 For more information on these and other basic types, consider referring to the official Rust documentation (https://doc.rust-lang.org/std/). It provides comprehensive explanations for all of these and many others in detail.
+
+== Reference
+* link:https://www.rust-lang.org/learn/get-started[get started with Rust]
+* link:https://doc.rust-lang.org/rust-by-example/[rust by example]
+* link:https://pola.rs/[polars.rs]
