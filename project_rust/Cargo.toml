@@ -1,0 +1,28 @@
+[package]
+name = "project_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[[bin]]
+name = "type"
+path = "src/bin/type.rs"
+
+
+[[bin]]
+name = "template"
+path = "src/bin/template.rs"
+
+
+[[bin]]
+name = "mutability"
+path = "src/bin/mutability.rs"
+
+
+[[bin]]
+name = "shadow"
+path = "src/bin/shadow.rs"
