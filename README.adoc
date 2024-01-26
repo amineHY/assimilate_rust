@@ -14,13 +14,13 @@
 
 [source, bash]
 ----
-include::tree.txt[]
+include::assets/tree.txt[]
 ----
 
 == Cargo: the Rust build tool and package manager
 When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
 
-* *cargo new hello-rust* : generates a "Hello, world!" project 
+* *cargo new hello-rust* : generates a "Hello, world!" project
 * *cargo build*: build your project
 * *cargo run*: run your project
 * *cargo test*: test your project

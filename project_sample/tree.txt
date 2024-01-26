@@ -1,0 +1,67 @@
+.
+├── Cargo.lock
+├── Cargo.toml
+├── data
+│   └── data.csv
+├── src
+│   ├── script1.rs
+│   └── script2.rs
+├── target
+│   ├── CACHEDIR.TAG
+│   ├── debug
+│   │   ├── assimilate_rust
+│   │   ├── assimilate_rust.d
+│   │   ├── build
+│   │   ├── deps
+│   │   ├── examples
+│   │   ├── incremental
+│   │   ├── sample
+│   │   ├── sample.d
+│   │   ├── script
+│   │   ├── script.d
+│   │   ├── script1
+│   │   ├── script1.d
+│   │   ├── script2
+│   │   └── script2.d
+│   ├── doc
+│   │   ├── aho_corasick
+│   │   ├── byteorder
+│   │   ├── cfg_if
+│   │   ├── crates.js
+│   │   ├── csv
+│   │   ├── getrandom
+│   │   ├── help.html
+│   │   ├── libc
+│   │   ├── memchr
+│   │   ├── ppv_lite86
+│   │   ├── proc_macro2
+│   │   ├── quote
+│   │   ├── rand
+│   │   ├── rand_chacha
+│   │   ├── rand_core
+│   │   ├── regex
+│   │   ├── regex_automata
+│   │   ├── regex_syntax
+│   │   ├── rustc_serialize
+│   │   ├── script
+│   │   ├── search-index.js
+│   │   ├── serde
+│   │   ├── serde_derive
+│   │   ├── settings.html
+│   │   ├── src
+│   │   ├── src-files.js
+│   │   ├── static.files
+│   │   ├── syn
+│   │   ├── trait.impl
+│   │   ├── type.impl
+│   │   └── unicode_ident
+│   └── release
+│       ├── build
+│       ├── deps
+│       ├── examples
+│       ├── incremental
+│       ├── script
+│       └── script.d
+└── tree.txt
+
+41 directories, 24 files

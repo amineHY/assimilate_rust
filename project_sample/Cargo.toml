@@ -1,7 +1,8 @@
+workspace = { members = ["guessing_game"] }
 [package]
-name = "assimilate_rust"
+name = "learn_rust"
 version = "0.1.0"
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -13,9 +14,9 @@ regex = "1"
 ferris-says = "0.3.1"
 
 [[bin]]
-name = "script"
-path = "src/bin/script.rs"
+name = "script1"
+path = "src/bin/script1.rs"
 
 [[bin]]
-name = "sample"
-path = "src/bin/sample.rs"
+name = "script2"
+path = "src/bin/script2.rs"
