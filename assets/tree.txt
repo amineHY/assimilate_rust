@@ -10,7 +10,8 @@
 │   │   └── main.rs
 │   └── target
 │       ├── CACHEDIR.TAG
-│       └── debug
+│       ├── debug
+│       └── doc
 ├── project_hello_world
 │   ├── Cargo.lock
 │   ├── Cargo.toml
@@ -34,4 +35,4 @@
     │   └── release
     └── tree.txt
 
-17 directories, 18 files
+18 directories, 18 files

@@ -6,26 +6,11 @@
 
 * First head over to and proceed with the link:https://doc.rust-lang.org/book/ch01-01-installation.html[Instalation]
 
-* To update installation proceed ith the following command
+* To update installation proceed with the following command
 
     rustup update
 
-== project structure
 
-[source, bash]
-----
-include::assets/tree.txt[]
-----
-
-== Cargo: the Rust build tool and package manager
-When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
-
-* *cargo new hello-rust* : generates a "Hello, world!" project
-* *cargo build*: build your project
-* *cargo run*: run your project
-* *cargo test*: test your project
-* *cargo doc*: build documentation for your project
-* *cargo publish*: publish a library to crates.io
 
 == Compile Rust project
 
@@ -33,13 +18,36 @@ Create a file with .rs extension, and your code then compile the file
 
     rustc script.rs
 
+== Cargo: build tool and package manager
+
+When you install `Rustup` you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. `Cargo` does lots of things:
+
+* *cargo new hello-rust* : generates a `Hello, world!` project
+
+    project_hello_world
+    ├── Cargo.lock
+    ├── Cargo.toml
+    ├── src
+    │   └── main.rs
+    └── target
+        ├── CACHEDIR.TAG
+        └── debug
+
+* *cargo build*: build your project
+* *cargo run*: run your project
+* *cargo test*: test your project
+* *cargo doc*: build documentation for your project
+* *cargo publish*: publish a library to `crates.io`
+
 == Building Rust project
 
 In the context of Rust, cargo build and cargo run are commands used for compiling and running your project. Here's what they do:
 
 
-* cargo build: This command is responsible for building your project from source code into a usable form. It produces an executable file in the target/debug directory by default, or you can specify another location with --target option.
-The resulting binary doesn't contain any runtime optimizations and may be slower than if it were produced with cargo build --release. However, this command is useful for preparing your project to be run on a target system, especially when testing the compilation process.
+* ``cargo build``: This command is responsible for building your project from source code into a usable form.
+It produces an executable file in the target/debug directory by default, or you can specify another location with ``--target`` option.
+
+The resulting binary doesn't contain any runtime optimizations and may be slower than if it were produced with ``cargo build --release``. However, this command is useful for preparing your project to be run on a target system, especially when testing the compilation process.
 
     # debug: build single binary
     cargo build --bin script
@@ -51,9 +59,10 @@ The resulting binary doesn't contain any runtime optimizations and may be slower
     ./target/release/script
 
 
-* cargo run: This command builds your project (by default in debug mode), then runs its resulting executable file. You can also use it directly with the name of one of your project's binaries specified as an argument to only build and run that binary, as demonstrated before.
+* ``cargo run``: This command builds your project (by default in debug mode), then runs its resulting executable file.
+You can also use it directly with the name of one of your project's binaries specified as an argument to only build and run that binary, as demonstrated before.
 
-Both commands compile your code into a binary or library which you can execute on your system using cargo run followed by the directory/filename of your main function (usually in src/bin). Useful flags include --release for optimizations during compilation and --target to specify output location. For more advanced usage, consider checking out the Cargo documentation at https://doc.rust-lang.org/cargo/.
+Both commands compile your code into a binary or library which you can execute on your system using cargo run followed by the directory/filename of your main function (usually in src/bin). Useful flags include ``--release`` for optimizations during compilation and ``--target ``to specify output location.
 
 
 
@@ -90,7 +99,7 @@ Both commands compile your code into a binary or library which you can execute o
 
 == Built-in types
 
-Rust has several built-in types for handling different kinds of data:
+`Rust` has several built-in types for handling different kinds of data:
 
 
 * **Integral Types**: These include u8, i32, and so on. The first character indicates whether the number is signed (i) or unsigned (u), and the number after that indicates the size in bits (8-bit, 32-bit, etc.).
@@ -127,32 +136,39 @@ Remember that in Rust, types must be declared and annotated as such. You also ha
 
 For more information on these and other basic types, consider referring to the official Rust documentation (https://doc.rust-lang.org/std/). It provides comprehensive explanations for all of these and many others in detail.
 
-== Reference
-* link:https://www.rust-lang.org/learn/get-started[get started with Rust]
-* link:https://doc.rust-lang.org/rust-by-example/[rust by example]
-* link:https://pola.rs/[polars.rs]
-
 == Notes
+* In Rust, variables are immutable by default
 
-* ‘let‘ create a new variable
+* `let` create a new variable
+
     let apples = 5;
 
-* In ‘Rust‘, variables are immutable by default
-
 * To make a variable mutable, we add mut before the variable name:
+
     let apples = 5; // immutable
     let mut bananas = 5; // mutable
 
-* The "::" syntax in the ::new  line indicates that new is an associated function of the String type.
+* The ``::`` syntax in the ``::new``  line indicates that new is an associated function of the ``String`` type.
+
     let mut guess = String::new();
 
-* let mut guess = String::new(); create a mutable variable that is currently bound to a new, empty instance of a String
+* `let mut guess = String::new();` create a mutable variable that is currently bound to a new, empty instance of a ``String``
 
     io::stdin()
         .read_line(&mut guess)
 
-* call the stdin function from the io module
+* Call the ``stdin`` function from the ``io`` module
 
     io::stdin()
         .read_line(&mut guess)
-* running the cargo doc --open command will build documentation provided by all your dependencies locally and open it in your browser.
+
+* Running the `cargo doc --open` command will build documentation provided by all your dependencies locally and open it in your browser.
+
+
+
+== Reference
+
+* link:https://www.rust-lang.org/learn/get-started[get started with Rust]
+* link:https://doc.rust-lang.org/rust-by-example/[rust by example]
+* link:https://pola.rs/[polars.rs]
+* https://doc.rust-lang.org/cargo/.
