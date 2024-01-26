@@ -131,3 +131,28 @@ For more information on these and other basic types, consider referring to the o
 * link:https://www.rust-lang.org/learn/get-started[get started with Rust]
 * link:https://doc.rust-lang.org/rust-by-example/[rust by example]
 * link:https://pola.rs/[polars.rs]
+
+== Notes
+
+* ‘let‘ create a new variable
+    let apples = 5;
+
+* In ‘Rust‘, variables are immutable by default
+
+* To make a variable mutable, we add mut before the variable name:
+    let apples = 5; // immutable
+    let mut bananas = 5; // mutable
+
+* The "::" syntax in the ::new  line indicates that new is an associated function of the String type.
+    let mut guess = String::new();
+
+* let mut guess = String::new(); create a mutable variable that is currently bound to a new, empty instance of a String
+
+    io::stdin()
+        .read_line(&mut guess)
+
+* call the stdin function from the io module
+
+    io::stdin()
+        .read_line(&mut guess)
+* running the cargo doc --open command will build documentation provided by all your dependencies locally and open it in your browser.
