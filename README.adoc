@@ -108,26 +108,26 @@ When you install `Rustup` you’ll also get the latest stable version of the ``R
 
 
 
-== Build and release a Rust project
+Here is a workflow to build and release a Rust project
 
 . Open your terminal in your project directory (where `Cargo.toml` is located).
-. To compile the project, without optimizations for speed or size, use the command:
+. To compile the project, without optimizations for speed or size, use the command
 
    $ cargo build
 
-   This produces a binary file under target/debug/. You can run this program with:
+   This produces a binary file under target/debug/. You can run this program with
 
    $ ./target/debug/your_program
 
-. If you want to optimize your project for speed and size, use the command:
+. If you want to optimize your project for speed and size, use the command
 
    $ cargo build --release
 
-   This produces a binary file under target/release/. You can run this program with:
+   This produces a binary file under target/release/. You can run this program with
 
    $ ./target/release/your_program
 
-. If you want to specify which executable to run, use the `--bin` argument followed by your chosen binary name. For instance, if you have multiple executables in your project and you're interested in running "script":
+. If you want to specify which executable to run, use the `--bin` argument followed by your chosen binary name. For instance, if you have multiple executables in your project and you're interested in running `script`
 
    $ cargo run --bin script
    ./target/release/script
@@ -139,16 +139,15 @@ When you install `Rustup` you’ll also get the latest stable version of the ``R
 * Publish package using `cargo publish` command in terminal.
 . Test the published package by creating a new project and use it as dependency with its name and version number.
 
-* *Statements* are instructions that perform some action and do not return a value. Creating a variable and assigning a value to it with the let keyword is a statement.
+== Running project in bin
 
-    let x = 3;
+    cargo run --bin variable
+    cargo run --bin mutability
+    cargo run --bin shadow
+    cargo run --bin type
 
-* *Expressions* evaluate to a resultant value.
 
-    {
-        let x = 3;
-        x + 1
-    }
+
 
 
 
@@ -183,14 +182,19 @@ When you install `Rustup` you’ll also get the latest stable version of the ``R
 
 * link:https://doc.rust-lang.org/book/ch03-03-how-functions-work.html[Functions] can return values to the code that calls them. We don’t name return values, but we must declare their type after an arrow (->)
 
+* *Statements* are instructions that perform some action and do not return a value. Creating a variable and assigning a value to it with the let keyword is a statement.
+
+    let x = 3;
+
+* *Expressions* evaluate to a resultant value.
+
+    {
+        let x = 3;
+        x + 1
+    }
 * Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value
 
-== Running project in bin
 
-    cargo run --bin variable
-    cargo run --bin mutability
-    cargo run --bin shadow
-    cargo run --bin type
 
 == Reference
 
