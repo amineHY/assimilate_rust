@@ -135,9 +135,20 @@ When you install `Rustup` you’ll also get the latest stable version of the ``R
 . After finishing your work on GitHub or other platforms, to publish the package to crates.io for others to use:
 * Increment version number in `Cargo.toml` (under `[package]`) according to semantic versioning rules.
 * Login into your account with `cargo login <your token>` command in terminal where `<your token>` is the API Token which you can generate from https://crates.io/me.
+
 * Publish package using `cargo publish` command in terminal.
 . Test the published package by creating a new project and use it as dependency with its name and version number.
 
+* *Statements* are instructions that perform some action and do not return a value. Creating a variable and assigning a value to it with the let keyword is a statement.
+
+    let x = 3;
+
+* *Expressions* evaluate to a resultant value.
+
+    {
+        let x = 3;
+        x + 1
+    }
 
 
 
@@ -169,6 +180,10 @@ When you install `Rustup` you’ll also get the latest stable version of the ``R
 
 * Running the `cargo doc --open` command will build documentation provided by all your dependencies locally and open it in your browser.
 * A vector is a similar collection type provided by the standard library that is allowed to grow or shrink in size.
+
+* link:https://doc.rust-lang.org/book/ch03-03-how-functions-work.html[Functions] can return values to the code that calls them. We don’t name return values, but we must declare their type after an arrow (->)
+
+* Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value
 
 == Running project in bin
 

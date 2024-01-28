@@ -26,3 +26,11 @@ path = "src/bin/mutability.rs"
 [[bin]]
 name = "shadow"
 path = "src/bin/shadow.rs"
+
+[[bin]]
+name = "statement_experession"
+path = "src/bin/statement_experession.rs"
+
+[[bin]]
+name = "control_flow"
+path = "src/bin/control_flow.rs"
