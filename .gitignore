@@ -11,3 +11,5 @@ Cargo.lock
 
 # Ignore file lock (used in some MacOS environments)
 .file_lock.*
+
+.DS_Store
