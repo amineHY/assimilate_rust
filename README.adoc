@@ -26,19 +26,20 @@ This document provides an overview of the Rust programming language, including i
 | arch   | isize  | usize
 |===
 +
-`Signed` variant can store numbers from -(2^(n - 1)) to 2^(n - 1) - 1 inclusive, where n is the number of bits that variant uses. So an i8 can store numbers from -(2^7) to 2^7 - 1, which equals -128 to 127.
+`Signed` variant can store numbers from `-(2^(n - 1)) to 2^(n - 1) - 1 `inclusive, where n is the number of bits that variant uses. 
+So an i8 can store numbers from `-(2^7) to 2^7 - 1`, which equals` -128` to `127`.
 +
-`Unsigned` variants can store numbers from 0 to 2^n - 1, where n is the number of bits that variant uses. So a u8 can store numbers from 0 to 2^8 - 1, which equals 0 to 255.  
+`Unsigned` variants can store numbers from 0 to `2^n - 1`, where n is the number of bits that variant uses. So a u8 can store numbers from 0 to `2^8 - 1`, which equals 0 to 255.  
 
 * **Floating-Point Types**: These are f64 and f32 which represent double precision floating point numbers and single precision ones respectively.
-* **Numeric Operations**: Rust has several traits that allow you to do numeric operations on types, including addition (Add), subtraction (Sub), multiplication (Mul), division (Div), and so forth. These are defined in the std::ops module.
+* **Numeric Operations**: Rust has several traits that allow you to do numeric operations on types, including addition (Add), subtraction (Sub), multiplication (Mul), division (Div), and so forth. These are defined in the `std::ops` module.
 * **Boolean Type**: This is a type that can have only two values, true or false. It's often used for control flow in your programs.
 * **Character Types**: Rust's char type represents a Unicode Scalar Value, meaning it can represent any valid character in many languages and beyond.
-* **Array Type**: This is a fixed-size collection of elements with the same type. For example, let arr: [i32; 5] = [1, 2, 3, 4, 5]; declares an array of five i32 values.
+* **Array Type**: This is a fixed-size collection of elements with the same type. For example, `let arr: [i32; 5] = [1, 2, 3, 4, 5];` declares an array of five i32 values.
 * **Tuple Type**: This is a general-purpose data structure that can hold different types and amounts of data. For example, let tup: (i32, f64, u8) = (500, 60.4, 1); declares a tuple with an i32, f64, and u8 value.
 * **String Type**: Rust's String type is a growable UTF-8 encoded string type that can be easily modified like you would do in Python or Java.
 * **Pointer Types**: These types represent the memory addresses of values, and there are two kinds: Box<T> for allocating on the heap (and thus allowing large amounts of data), and &T for references to other values.
-* **Option Type**: Rust's Option type is used when a value could be something or nothing. This can help prevent null pointer exceptions at compile time. The variants are Some(T) (which represents a value of type T) and None, which means no value.
+* **Option Type**: Rust's Option type is used when a value could be something or nothing. This can help prevent null pointer exceptions at compile time. The variants are Some(T) (which represents a value of type T) and `None`, which means no value.
 
 Remember that in Rust, types must be declared and annotated as such. You also have the flexibility to create your own custom data structures using structs or enums.
 
@@ -113,6 +114,8 @@ When you install `Rustup` you’ll also get the latest stable version of the ``R
 
 
 
+== Workflow to build and release a Rust project
+
 Here is a workflow to build and release a Rust project
 
 . Open your terminal in your project directory (where `Cargo.toml` is located).
@@ -145,18 +148,13 @@ Here is a workflow to build and release a Rust project
 . Test the published package by creating a new project and use it as dependency with its name and version number.
 
 == Running project in bin
-
+    cd project_rust
     cargo run --bin variable
     cargo run --bin mutability
     cargo run --bin shadow
     cargo run --bin type
 
-
-
-
-
-
-== Notes
+== Generic Notes
 * In Rust, variables are immutable by default
 
 * `let` create a new variable
