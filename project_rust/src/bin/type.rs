@@ -1,3 +1,7 @@
+/// `main` function prints some messages to test primitive data types like
+/// integers, floats, booleans, characters, arrays, and tuples. It calls other
+/// functions like `sum`, `sub`, etc. to perform math operations and print
+/// results. The `array` function shows examples of declaring arrays.
 fn main() {
     println!("\nTesting Types:");
 

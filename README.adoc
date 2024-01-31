@@ -2,9 +2,10 @@
 :toc:
 :toc-title:
 
+== Introduction
 
+This document provides an overview of the Rust programming language, including its key features, data types, and installation instructions. Rust is a systems programming language focused on safety, speed, and concurrency. It accomplishes memory safety without using garbage collection, making it useful for a range of applications from embedded devices to web services.
 
-== Rust language
 
 === Built-in types
 
@@ -14,15 +15,16 @@
 |===
 | Length | Signed | Unsigned
 | 8-bit  | i8     | u8
-| 16-bit | i16    | u16
+| 16-bit | i16    | u16 
 | 32-bit | i32    | u32
 | 64-bit | i64    | u64
 | 128-bit| i128   | u128
 | arch   | isize  | usize
 |===
 
-* Each `signed` variant can store numbers from -(2^(n - 1)^) to 2^(n - 1)^ - 1 inclusive, where n is the number of bits that variant uses. So an i8 can store numbers from -(27) to 27 - 1, which equals -128 to 127.
-* `Unsigned` variants can store numbers from 0 to 2n - 1, so a u8 can store numbers from 0 to 28 - 1, which equals 0 to 255.
+* Each `signed` variant can store numbers from -(2^(n - 1)) to 2^(n - 1) - 1 inclusive, where n is the number of bits that variant uses. So an i8 can store numbers from -(2^7) to 2^7 - 1, which equals -128 to 127.
+* `Unsigned` variants can store numbers from 0 to 2^n - 1, so a u8 can store numbers from 0 to 2^8 - 1, which equals 0 to 255.
+
 
 * **Integral Types**: These include u8, i32, and so on. The first character indicates whether the number is signed (i) or unsigned (u), and the number after that indicates the size in bits (8-bit, 32-bit, etc.).
 * **Floating-Point Types**: These are f64 and f32 which represent double precision floating point numbers and single precision ones respectively.
