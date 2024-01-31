@@ -195,6 +195,11 @@ Here is a workflow to build and release a Rust project
 * Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value
 
 
+== Working with Candle
+
+link:https://huggingface.github.io/candle/guide/installation.html[Install] `Candle` for `Rust` project
+
+    cargo add --git https://github.com/huggingface/candle.git candle-core
 
 == Reference
 
