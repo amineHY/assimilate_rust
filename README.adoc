@@ -11,7 +11,11 @@ This document provides an overview of the Rust programming language, including i
 
 `Rust` has several built-in types for handling different kinds of data:
 
-.Table 3-1: Integer Types in Rust
+
+* **Integral Types**: These include u8, i32, and so on. The first character indicates whether the number is signed (i) or unsigned (u), and the number after that indicates the size in bits (8-bit, 32-bit, etc.).
++
+
+.Integer Types in Rust
 |===
 | Length | Signed | Unsigned
 | 8-bit  | i8     | u8
@@ -22,11 +26,10 @@ This document provides an overview of the Rust programming language, including i
 | arch   | isize  | usize
 |===
 
-* Each `signed` variant can store numbers from -(2^(n - 1)) to 2^(n - 1) - 1 inclusive, where n is the number of bits that variant uses. So an i8 can store numbers from -(2^7) to 2^7 - 1, which equals -128 to 127.
-* `Unsigned` variants can store numbers from 0 to 2^n - 1, so a u8 can store numbers from 0 to 2^8 - 1, which equals 0 to 255.
+`Signed` variant can store numbers from -(2^(n - 1)) to 2^(n - 1) - 1 inclusive, where n is the number of bits that variant uses. So an i8 can store numbers from -(2^7) to 2^7 - 1, which equals -128 to 127.
 
+`Unsigned` variants can store numbers from 0 to 2^n - 1, where n is the number of bits that variant uses. So a u8 can store numbers from 0 to 2^8 - 1, which equals 0 to 255.  
 
-* **Integral Types**: These include u8, i32, and so on. The first character indicates whether the number is signed (i) or unsigned (u), and the number after that indicates the size in bits (8-bit, 32-bit, etc.).
 * **Floating-Point Types**: These are f64 and f32 which represent double precision floating point numbers and single precision ones respectively.
 * **Numeric Operations**: Rust has several traits that allow you to do numeric operations on types, including addition (Add), subtraction (Sub), multiplication (Mul), division (Div), and so forth. These are defined in the std::ops module.
 * **Boolean Type**: This is a type that can have only two values, true or false. It's often used for control flow in your programs.
